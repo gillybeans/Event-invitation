@@ -72,15 +72,19 @@ const menu_btn = document.querySelector('.hamburger');
 
 
 /////// URL PARAMETERS 
+let urlParams = new URLSearchParams(window.location.search);
+const welcomeName = document.querySelector('.welcome');
+const nameFiller = document.querySelector('#name');
+const emailFiller = document.querySelector('#email');
 
-const urlParams = new URLSearchParams(window.location.search);
-const name = urlParams.get('name');
-
-const nameSpan = document.querySelector('.name');
-const input = document.querySelector('#name');
-
-if (name != null) {
-  document.title = `${name} | Eventinbjudan Nordsken`;
-  nameSpan.textContent = ` ${name}`;
-  input.value = name;
+if (urlParams.has('name')) {
+  let name = urlParams.get('name');
+  welcomeName.innerText += `Hej, ${name}!`;
+  nameFiller.setAttribute('value', name);
 }
+
+if (urlParams.has('email')) {
+  let email = urlParams.get('email');
+  emailFiller.setAttribute('value', email);
+}
+
