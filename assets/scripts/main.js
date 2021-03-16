@@ -56,4 +56,31 @@ sliders.forEach(slider => {
 
 
 
-/***** BAKGROUND CHANGE ******/
+////// HAMBURGER MENU
+
+const menu_btn = document.querySelector('.hamburger');
+	const mobile_menu = document.querySelector('.mobile-nav');
+
+	menu_btn.addEventListener('click', function () {
+		menu_btn.classList.toggle('is-active');
+		mobile_menu.classList.toggle('is-active');
+	});
+
+
+
+
+
+
+/////// URL PARAMETERS 
+
+const urlParams = new URLSearchParams(window.location.search);
+const name = urlParams.get('name');
+
+const nameSpan = document.querySelector('.name');
+const input = document.querySelector('#name');
+
+if (name != null) {
+  document.title = `${name} | Eventinbjudan Nordsken`;
+  nameSpan.textContent = ` ${name}`;
+  input.value = name;
+}
