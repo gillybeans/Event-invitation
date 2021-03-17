@@ -47,24 +47,93 @@ body {
   }
 
 
-  .buy-ticket {
-    list-style: none;
-  }
-  
+
   
   .home-intro {
     padding: 50vh 5vh;
-    background: #123 url(https://unsplash.it/900);
+    background: rgb(45, 89, 133) url(/assets/images/gaming-mob.png);
     background-size: cover;
     background-blend-mode: multiply;
     color: white;
     text-align: center;
+    width: 100%;
   }
+
+
+
+
+.home-intro h1.big-intro {
+  font-size: 40px;
+  animation-name: moveToLeft;
+  animation-duration: 2s;
+  text-transform: uppercase;
+}
+
+.home-intro h1.big-intro span {
+  font-weight: 100;
+}
+
+.home-intro h1.small-intro {
+  animation-name: moveToRight;
+  animation-duration: 2s;
+  text-transform: uppercase;
+}
+
+
+
+  @keyframes moveToLeft {
+    0% {
+      transform: translateX(120px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveToRight {
+    0% {
+      transform: translateX(-120px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+
+  @keyframes animateTxt {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
 
   .home-intro p {
     padding-bottom: 1em;
+    animation-name: animateTxt;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
   }
   
+  .buy-ticket {
+    list-style: none;
+    animation-name: animateTxt;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+  }
+
+
+
+
 main {
   background-color: black;
   color: white;
@@ -140,6 +209,12 @@ main {
   }
 
 
+
+  .home-more-stuff .img {
+    width: 400px;
+    height: 400px;
+  }
+
 /*
   .img .from-left {
       max-width: 100%;
@@ -151,6 +226,32 @@ main {
       height: auto;
     }
 */
+
+
+.home-intro .brand-overlay.show {
+  opacity: 1;
+  left: 0;
+}
+
+.home-intro .brand-overlay {
+  position: absolute;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  z-index: 1;
+  top: 0;
+  transition: 0.75s ease;
+  left: -50px;
+  opacity: 0;
+  animation: slide-in 1.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 799px) {
+  .home-intro .brand-overlay {
+    height: 100vw;
+    max-height: 100%;
+  }
+  }
 
 
 /**** BUTTONS N STUFF ******/
@@ -243,7 +344,7 @@ a, a:visited, a:active, a:hover {
   max-width: 300px;
   height: 220px;
   background: #fff;
-  margin: 30px 10px;
+  margin: 30px 20px;
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
@@ -600,6 +701,7 @@ a, a:visited, a:active, a:hover {
 
   .home-intro {
     padding: 50vh 20vh;
+    background: rgb(45, 89, 133) url(/assets/images/gaming.png);
   }
 
   .home-intro p {
