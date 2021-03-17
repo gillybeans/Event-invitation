@@ -277,7 +277,7 @@ main {
 .button__link--btn--highlight {
   background: #e7462c;
   border-color: #e7462c;
-  color: #333;
+  color: white;
 }
 
 .button__link--btn--highlight:hover {
@@ -489,27 +489,6 @@ a, a:visited, a:active, a:hover {
   cursor: pointer;
   font-size: 18px;
 }
-
-
-
-
-
-
-.close-btn,
-.menu-btn {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 25px;
-  height: 25px;
-  margin: 15px;
-  margin-right: 20px;
-  fill: white;
-}
-
-
-
-
 
 
 
