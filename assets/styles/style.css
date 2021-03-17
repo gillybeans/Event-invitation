@@ -71,7 +71,7 @@ main {
 }
 
   .home-about {
-    padding: 4em 0;
+    padding: 4em 2em;
     max-width: 900px;
     margin: 0 auto;
   }
@@ -95,14 +95,20 @@ main {
   
   .more-stuff-grid {
     background: black;
-    padding: 4em 0;
-    display: grid;
+    padding: 2em 0;
+    /*display: grid;*/
     grid-gap: 2em;
     align-items: center;
     grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
         1em,
         1fr
       );
+      padding: 1rem 2rem;
+  }
+
+  .more-stuff-grid img {
+    max-width: 100%;
+    height: auto;
   }
   
   .from-left {
@@ -301,12 +307,12 @@ a, a:visited, a:active, a:hover {
 }
 
 .contact-in {
-  width: 60%;
+  width: 70%;
   height: auto;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 20px;
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;
@@ -322,8 +328,8 @@ a, a:visited, a:active, a:hover {
 }
 
 .contact-map iframe {
-  width: 360px;
-  height: 360px;
+  max-width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
 }
@@ -571,6 +577,22 @@ a, a:visited, a:active, a:hover {
   }
 
 
+
+
+
+  .more-stuff-grid {
+    background: black;
+    padding: 4em 0;
+    display: grid;
+    grid-gap: 2em;
+    align-items: center;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+        1em,
+        1fr
+      );
+  }
+
+
   .container-nav {
     display: none;
   }
@@ -600,6 +622,29 @@ a, a:visited, a:active, a:hover {
 	.hamburger {
 		display: none;
 	}
+
+
+
+  .contact-in {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+  }
+
+  .contact-map iframe {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
 
 }
