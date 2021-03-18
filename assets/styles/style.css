@@ -165,7 +165,6 @@ main {
   .more-stuff-grid {
     background: black;
     padding: 2em 0;
-    /*display: grid;*/
     grid-gap: 2em;
     align-items: center;
     grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
@@ -215,18 +214,6 @@ main {
     height: 400px;
   }
 
-/*
-  .img .from-left {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .img .from-right {
-      max-width: 100%;
-      height: auto;
-    }
-*/
-
 
 .home-intro .brand-overlay.show {
   opacity: 1;
@@ -262,6 +249,7 @@ main {
   transition: background 250ms ease-in-out;
   letter-spacing: 1px;
   padding: 0.75em 1.5em;
+  text-transform: uppercase;
 }
 
 .button__link--btn:hover {
@@ -320,6 +308,11 @@ a, a:visited, a:active, a:hover {
   color: white;
 }
 
+.footer__sitemap-menu {
+  display: flex;
+  padding-left: 30px;
+  line-height: 1.9;
+}
 
 
 
@@ -413,7 +406,6 @@ a, a:visited, a:active, a:hover {
   margin: auto;
   margin-top: 40px;
   margin-bottom: 20px;
-  /*display: flex;*/
   flex-wrap: wrap;
   padding: 10px;
   border-radius: 10px;

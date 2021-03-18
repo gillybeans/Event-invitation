@@ -4,6 +4,8 @@ const sectionOne = document.querySelector(".home-intro");
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 
+
+/////// NAV SCROLL BG
 const sectionOneOptions = {
   rootMargin: "-200px 0px 0px 0px"
 };
@@ -24,6 +26,8 @@ sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
 
+
+/////// MAIN AND PICS
 const appearOptions = {
   threshold: 0,
   rootMargin: "0px 0px -250px 0px"
@@ -54,10 +58,7 @@ sliders.forEach(slider => {
 
 
 
-
-
 ////// HAMBURGER MENU
-
 const menu_btn = document.querySelector('.hamburger');
 	const mobile_menu = document.querySelector('.mobile-nav');
 
@@ -65,11 +66,6 @@ const menu_btn = document.querySelector('.hamburger');
 		menu_btn.classList.toggle('is-active');
 		mobile_menu.classList.toggle('is-active');
 	});
-
-
-
-
-
 
 /////// URL PARAMETERS 
 let urlParams = new URLSearchParams(window.location.search);
