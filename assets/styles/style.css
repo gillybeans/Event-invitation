@@ -10,7 +10,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
   }
   
   .site-logo {
@@ -38,8 +37,6 @@ body {
     color: var(--text);
   }
   
-
-  
   .nav-scrolled {
     --text: #f4f4f4;
     --text-inverse: #333;
@@ -47,9 +44,7 @@ body {
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   }
 
-
-
-  
+  /******* HERO SECTION ******/
   .home-intro {
     padding: 50vh 5vh;
     background: rgb(45, 89, 133) url(/assets/images/gaming-mob.jpg);
@@ -60,27 +55,22 @@ body {
     width: 100%;
   }
 
+  .home-intro h1.big-intro {
+    font-size: 40px;
+    animation-name: moveToLeft;
+    animation-duration: 2s;
+    text-transform: uppercase;
+  }
 
+  .home-intro h1.big-intro span {
+    font-weight: 100;
+  }
 
-
-.home-intro h1.big-intro {
-  font-size: 40px;
-  animation-name: moveToLeft;
-  animation-duration: 2s;
-  text-transform: uppercase;
-}
-
-.home-intro h1.big-intro span {
-  font-weight: 100;
-}
-
-.home-intro h1.small-intro {
-  animation-name: moveToRight;
-  animation-duration: 2s;
-  text-transform: uppercase;
-}
-
-
+  .home-intro h1.small-intro {
+    animation-name: moveToRight;
+    animation-duration: 2s;
+    text-transform: uppercase;
+  }
 
   @keyframes moveToLeft {
     0% {
@@ -104,7 +94,6 @@ body {
     }
   }
 
-
   @keyframes animateTxt {
     0% {
       opacity: 0;
@@ -113,8 +102,6 @@ body {
       opacity: 1;
     }
   }
-
-
 
   .home-intro p {
     padding-bottom: 1em;
@@ -134,12 +121,13 @@ body {
 
 
 
-
+/***** SECTIONS *****/
 main {
-  background-color: black;
+  background-color: #14161b;
   color: white;
 }
 
+/***** OM OSS *****/
   .home-about {
     padding: 4em 2em;
     max-width: 900px;
@@ -154,6 +142,7 @@ main {
     margin-left: 1.5em;
   }
   
+  /***** PICS ****/
   .fade-in {
     opacity: 0;
     transition: opacity 250ms ease-in;
@@ -216,6 +205,8 @@ main {
   }
 
 
+
+  /***** BRAND OVERLAY BILD ******/
 .home-intro .brand-overlay.show {
   opacity: 1;
   left: 0;
@@ -240,6 +231,7 @@ main {
     max-height: 100%;
   }
   }
+
 
 
 /**** BUTTONS N STUFF ******/
@@ -276,52 +268,6 @@ main {
 
 
 
-
-
-
-  
-/*********** FOOTER STUFF ************/
-.footer__sitemap-text {
-  color: white;
-}
-
-.footer__sitemap {
-  background: #14161b;
-  padding: 5%;
-  font-size: 0.7rem;
-  font-weight: 300;
-  display: flex;
-  list-style: none;
-}
-
-.footer__sitemap li {
-  list-style: none;
-  border: none;
-  text-decoration: none;
-}
-
-a, a:visited, a:active, a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.footer__sitemap-contact {
-  color: white;
-}
-
-.footer__sitemap-menu {
-  display: flex;
-  padding-left: 30px;
-  line-height: 1.9;
-}
-
-
-
-
-
-
-
-
 /****** PICTURE AND HOVER ******/
 .container {
   position: relative;
@@ -330,7 +276,7 @@ a, a:visited, a:active, a:hover {
   align-items: center;
   flex-wrap: wrap;
   padding: 30px;
-  background: #14161b;
+  background: #000;
 }
 
 .container .card {
@@ -382,13 +328,6 @@ a, a:visited, a:active, a:hover {
   margin-top: -40px;
   transition-delay: 0.3s;
 }
-
-
-
-
-
-
-
 
 
 
@@ -485,9 +424,40 @@ a, a:visited, a:active, a:hover {
 
 
 
+/*********** FOOTER STUFF ************/
+.footer__sitemap-text {
+  color: white;
+}
 
+.footer__sitemap {
+  background: #14161b;
+  padding: 5%;
+  font-size: 0.7rem;
+  font-weight: 300;
+  display: flex;
+  list-style: none;
+}
 
+.footer__sitemap li {
+  list-style: none;
+  border: none;
+  text-decoration: none;
+}
 
+a, a:visited, a:active, a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__sitemap-contact {
+  color: white;
+}
+
+.footer__sitemap-menu {
+  display: flex;
+  padding-left: 30px;
+  line-height: 1.9;
+}
 
 
 
@@ -573,8 +543,9 @@ a, a:visited, a:active, a:hover {
 }
 }
 
-
-
+.content h2 {
+  margin-top: 0;
+}
 
 
 /********* MEDIA ********/
@@ -649,10 +620,6 @@ a, a:visited, a:active, a:hover {
     border-color: var(--text);
   }
 
-
-
-
-
   .more-stuff-grid {
     background: black;
     padding: 4em 0;
@@ -665,11 +632,9 @@ a, a:visited, a:active, a:hover {
       );
   }
 
-
   .container-nav {
     display: none;
   }
-
 
   .home-intro {
     padding: 50vh 20vh;
@@ -681,13 +646,10 @@ a, a:visited, a:active, a:hover {
     font-size: 18px;
   }
 
-
   .container {
     width: 100%;
     height: 80vh;
   }
-
-
 
 	.mobile-nav {
 		display: none;
@@ -696,8 +658,6 @@ a, a:visited, a:active, a:hover {
 	.hamburger {
 		display: none;
 	}
-
-
 
   .contact-in {
     width: 60%;
@@ -719,8 +679,6 @@ a, a:visited, a:active, a:hover {
     display: flex;
     flex-wrap: wrap;
   }
-
-
 }
 
 
