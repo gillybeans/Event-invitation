@@ -132,11 +132,25 @@ main {
     padding: 4em 2em;
     max-width: 900px;
     margin: 0 auto;
+    background: url(/assets/images/logo-color.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position-y: 4em;
+    background-position-x: 20em;
   }
   
   .columns {
     display: flex;
   }
+
+  @media screen and (max-width: 799px) {
+    .columns {
+      display: block;
+    }
+    }
+
+
   
   .col + .col {
     margin-left: 1.5em;
@@ -276,7 +290,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   padding: 30px;
-  background: #000;
+  background: #000 
 }
 
 .container .card {
@@ -679,6 +693,21 @@ a, a:visited, a:active, a:hover {
     display: flex;
     flex-wrap: wrap;
   }
+
+
+
+
+  .home-about {
+    padding: 4em 2em;
+    max-width: 900px;
+    margin: 0 auto;
+    background: url(/assets/images/logo-color.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position-y: 4em;
+  }
+  
 }
 
 
