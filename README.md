@@ -1,5 +1,5 @@
 # Event-invitation
-<img src="https://media.giphy.com/media/12gaOPj4dsnBTO/giphy.gif" width="100%">
+<img src="https://media.giphy.com/media/RHIelEDNgqgunQcSU3/giphy.gif" width="100%">
 A school assignment between a Web Development student and a school's IP Form &amp; Graphics student. Our goal is to create an event invitation in digital and physical form for a company - the event is NOT real and is only for this assignment. I've been tasked to create an event invitation landing page in <b>HTML, CSS & JavaScript</b> based of designs and sketches given to me by my group member. 
 
 We have picked a GAMING-party Event for a company that creates their own gaming/cosplay cons. This specific event is to launch in april 2021 that will be gaming oriantated and have a lot tournaments in games, cosplays and will end the weekend with a big party; both in-game and in-real-life. This is fake by the way.
@@ -14,5 +14,5 @@ Example of URL: https://tapetklister.netlify.app/?name=Bianca&email=bianca@test.
 
 
 ## Created by
-* Gilda Ahmadniaye (WU)
-* Dara (IP)
+* Gilda Ahmadniaye(WU)
+* Dara Torabpour(IP)
