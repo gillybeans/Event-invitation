@@ -1,0 +1,687 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .site-logo {
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+  
+  header {
+    --text: #f4f4f4;
+    --text-inverse: #333;
+    --background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3em;
+    transition: background 250ms ease-in;
+    background: var(--background);
+    color: var(--text);
+  }
+  
+  .nav-scrolled {
+    --text: #f4f4f4;
+    --text-inverse: #333;
+    --background: black;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /******* HERO SECTION ******/
+  .home-intro {
+    padding: 50vh 5vh;
+    background: rgb(45, 89, 133) url(/gaming-mob.890e74ef.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-align: center;
+    width: 100%;
+  }
+
+  .home-intro h1.big-intro {
+    font-size: 40px;
+    animation-name: moveToLeft;
+    animation-duration: 2s;
+    text-transform: uppercase;
+  }
+
+  .home-intro h1.big-intro span {
+    font-weight: 100;
+  }
+
+  .home-intro h1.small-intro {
+    animation-name: moveToRight;
+    animation-duration: 2s;
+    text-transform: uppercase;
+  }
+
+  @keyframes moveToLeft {
+    0% {
+      transform: translateX(120px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveToRight {
+    0% {
+      transform: translateX(-120px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes animateTxt {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .home-intro p {
+    padding-bottom: 1em;
+    animation-name: animateTxt;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  .buy-ticket {
+    list-style: none;
+    animation-name: animateTxt;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+  }
+
+
+
+/***** SECTIONS *****/
+main {
+  background-color: #14161b;
+  color: white;
+}
+
+/***** OM OSS *****/
+  .home-about {
+    padding: 4em 2em;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .columns {
+    display: flex;
+  }
+  
+  .col + .col {
+    margin-left: 1.5em;
+  }
+  
+  /***** PICS ****/
+  .fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+  
+  .more-stuff-grid {
+    background: black;
+    padding: 2em 0;
+    grid-gap: 2em;
+    align-items: center;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+        1em,
+        1fr
+      );
+      padding: 1rem 2rem;
+  }
+
+  .more-stuff-grid img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .from-left {
+    grid-column: 2 / 3;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  .from-right {
+    grid-column: 3 / 4;
+    -webkit-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  
+  .from-left,
+  .from-right {
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in,
+      -webkit-transform 400ms ease-in;
+    opacity: 0;
+  }
+  
+  .from-left.appear,
+  .from-right.appear {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+
+
+  .home-more-stuff .img {
+    width: 400px;
+    height: 400px;
+  }
+
+
+
+  /***** BRAND OVERLAY BILD ******/
+.home-intro .brand-overlay.show {
+  opacity: 1;
+  left: 0;
+}
+
+.home-intro .brand-overlay {
+  position: absolute;
+  object-fit: contain;
+  mix-blend-mode: screen;
+  z-index: 1;
+  top: 0;
+  transition: 0.75s ease;
+  left: -50px;
+  opacity: 0;
+  animation: slide-in 1.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 799px) {
+  .home-intro .brand-overlay {
+    height: 100vw;
+    max-height: 100%;
+  }
+  }
+
+
+
+/**** BUTTONS N STUFF ******/
+.button__link--btn {
+  border: 1.5px solid currentColor;
+  border-radius: 2em;
+  margin-left: 1em;
+  transition: background 250ms ease-in-out;
+  letter-spacing: 1px;
+  padding: 0.75em 1.5em;
+  text-transform: uppercase;
+}
+
+.button__link--btn:hover {
+  background: var(--text);
+  color: var(--text-inverse);
+  border-color: var(--text);
+}
+
+.button__link--btn::after {
+  display: none;
+}
+
+.button__link--btn--highlight {
+  background: #e7462c;
+  border-color: #e7462c;
+  color: white;
+}
+
+.button__link--btn--highlight:hover {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+
+
+/****** PICTURE AND HOVER ******/
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  background: #000;
+}
+
+.container .card {
+  position: relative;
+  max-width: 300px;
+  height: 220px;
+  background: #fff;
+  margin: 30px 20px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover {
+  height: 420px;
+}
+
+.container .card .imgBx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -50px;
+  left: 5px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2) ;
+}
+
+.container .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 5px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+
+
+
+
+/********** CONTACT US AND MAP *******/
+.container2 {
+  background: #14161b;
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.contact-in {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px #666;
+}
+
+.contact-map {
+  width: 100%;
+  height: auto;
+  flex: 50%;
+  float: left;
+}
+
+.contact-map iframe {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  width: 100%;
+  height: auto;
+  flex: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-form h1 {
+  margin-bottom: 10px;
+}
+
+.contact-form-txt {
+  width: 90%;
+  height: 15px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 50px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.contact-form-txt::placeholder {
+  color: #aaa;
+}
+
+.contact-form-textarea {
+  width: 90%;
+  height: 130px;
+  color: #000;
+  border: 1px solid #bcbcbc;
+  border-radius: 20px;
+  outline: none;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.contact-form-textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form-btn {
+  width: 40%;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background: #e7462c;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+
+/*********** FOOTER STUFF ************/
+.footer__sitemap-text {
+  color: white;
+}
+
+.footer__sitemap {
+  background: #14161b;
+  padding: 5%;
+  font-size: 0.7rem;
+  font-weight: 300;
+  display: flex;
+  list-style: none;
+}
+
+.footer__sitemap li {
+  list-style: none;
+  border: none;
+  text-decoration: none;
+}
+
+a, a:visited, a:active, a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__sitemap-contact {
+  color: white;
+}
+
+.footer__sitemap-menu {
+  display: flex;
+  padding-left: 30px;
+  line-height: 1.9;
+}
+
+
+
+
+
+/********* HAMB AND NAV ******/
+.hamburger {
+	position: relative;
+	display: block;
+	width: 35px;
+	cursor: pointer;
+	
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #FFF;
+	margin: 6px 0px;
+	transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0%;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color: #14161b;
+  opacity: 0.9;
+	padding-top: 140px;
+	transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+	background-color: #e7462c;
+
+	color: #FFF;
+	text-decoration: none;
+}
+
+.mobile-nav a:hover {
+	background-color: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 799px) {
+.main-nav {
+  display: none;
+}
+.account {
+  display: none;
+}
+}
+
+.content h2 {
+  margin-top: 0;
+}
+
+
+/********* MEDIA ********/
+@media screen and (min-width: 800px) {
+
+  .nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav__link {
+    --spacing: 1em;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+  
+  .nav__link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 2px;
+    background: currentColor;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    transition: -webkit-transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out;
+    transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  }
+  
+  .nav__link:hover::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  
+  .nav__link--btn {
+    border: 1.5px solid currentColor;
+    border-radius: 2em;
+    margin-left: 1em;
+    transition: background 250ms ease-in-out;
+    letter-spacing: 1px;
+    padding: 0.75em 1.5em;
+  }
+  
+  .nav__link--btn:hover {
+    background: var(--text);
+    color: var(--text-inverse);
+    border-color: var(--text);
+  }
+  
+  .nav__link--btn::after {
+    display: none;
+  }
+  
+  .nav__link--btn--highlight {
+    background: #e7462c;
+    border-color: #e7462c;
+    color: #333;
+  }
+  
+  .nav__link--btn--highlight:hover {
+    background: var(--text);
+    border-color: var(--text);
+  }
+
+  .more-stuff-grid {
+    background: black;
+    padding: 4em 0;
+    display: grid;
+    grid-gap: 2em;
+    align-items: center;
+    grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+        1em,
+        1fr
+      );
+  }
+
+  .container-nav {
+    display: none;
+  }
+
+  .home-intro {
+    padding: 50vh 20vh;
+    background: rgb(45, 89, 133) url(/gaming.54ceafb8.jpg);
+  }
+
+  .home-intro p {
+    padding-bottom: 1em;
+    font-size: 18px;
+  }
+
+  .container {
+    width: 100%;
+    height: 80vh;
+  }
+
+	.mobile-nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+  .contact-in {
+    width: 60%;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px #666;
+  }
+
+  .contact-map iframe {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+/*# sourceMappingURL=/style.985d7cce.css.map */
