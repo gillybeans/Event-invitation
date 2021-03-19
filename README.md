@@ -12,6 +12,21 @@ Example of URL: https://tapetklister.netlify.app/?name=Bianca&email=bianca@test.
 
 ## Code Review
 
+-Seems to be built 'responsive' and not 'mobile first', if you use the Inspector Toggle device function
+On our phones (though both small and old) the hero is a bit long and you have to scroll to the side/zoom out to see the burger.
+
+-We recommend to have a confirmation message after signup
+
+-There's a breakpoint where JOIN in the header disappears
+
+-A11y: consider using aria labels for accessability, also alt text on images (for SEO and a11y)
+
+-Super awesome and lots of animations!! 
+-Nice with the real links in footer!
+
+Really cool site
+// Linn & Sandra, two impressed non-gamers
+
 
 ## Created by
 * Gilda Ahmadniaye(WU)
